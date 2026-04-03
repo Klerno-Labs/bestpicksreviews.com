@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2026 21:42:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 21:56:58 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -16,6 +16,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best solar pathway lights for driveway</title>
+      <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
+      <description>Independent review of the best best solar pathway lights for driveway products. 15 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 21:56:58 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
+      <category>General</category>
+    </item>
     <item>
       <title>best garden hose that doesn&apos;t kink</title>
       <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
@@ -407,14 +415,6 @@
       <pubDate>Thu, 02 Apr 2026 19:24:30 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/review-top-pet-cameras-for-cats-with-night-vision/</guid>
       <category>Technology</category>
-    </item>
-    <item>
-      <title>best gluten-free meal kits under $200 per month</title>
-      <link>https://bestpicksreviews.com/review-best-gluten-free-meal-kits-under-200-per-month/</link>
-      <description>Independent review of the best best gluten-free meal kits under $200 per month products. 11 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Thu, 02 Apr 2026 19:20:02 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-gluten-free-meal-kits-under-200-per-month/</guid>
-      <category>Food &amp; Nutrition</category>
     </item>
   </channel>
 </rss>
