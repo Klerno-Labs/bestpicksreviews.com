@@ -46,10 +46,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bestpicksreviews.com"},{"@type":"ListItem","position":2,"name":"Reviews","item":"https://bestpicksreviews.com/reviews"},{"@type":"ListItem","position":3,"name":"Top 15 Best Sustainable Makeup Brushes Under $30 in 2024","item":"https://bestpicksreviews.com/best-sustainable-makeup-brushes-under-30/"}]}
   </script>
 
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are vegan makeup brushes good quality?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"What are sustainable makeup brushes made of?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"Which sustainable brushes are best for sensitive skin?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"What is the difference between natural and synthetic bristles?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"Are these brushes cruelty-free?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"How do I clean eco-friendly makeup brushes?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"Do bamboo makeup brushes break easily?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}}]}
-  </script>
+  
 
   <!-- Schema: Products + Reviews + AggregateRating -->
   <script type="application/ld+json">
@@ -96,7 +93,7 @@
 
   <!-- Dark Mode Init (prevents flash) -->
   <script>
-  (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t})();
+  (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.dataset.theme=t})();
   </script>
 
   <style>
@@ -1060,45 +1057,6 @@
 
       <!-- FAQ -->
       
-      <div class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        
-          <details class="faq-item">
-            <summary>Are vegan makeup brushes good quality?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>What are sustainable makeup brushes made of?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>Which sustainable brushes are best for sensitive skin?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>What is the difference between natural and synthetic bristles?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>Are these brushes cruelty-free?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>How do I clean eco-friendly makeup brushes?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>Do bamboo makeup brushes break easily?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-      </div>
 
       <!-- Email Capture: Bottom -->
       
@@ -1127,7 +1085,7 @@
       <section class="recs">
         <h2>More from BestPicks</h2>
         <p>Explore our other independently researched reviews</p>
-        <div class="rec-grid"><a href="https://bestpicksreviews.com/bestpicksreviews.com/" class="rec">
+        <div class="rec-grid"><a href="https://bestpicksreviews.com/review-best-ink-pens-that-dont-bleed/" class="rec">
         <span class="rec-tag">8 products</span>
         <h4>best ink pens that dont bleed</h4>
         <span class="rec-arrow">Read Review &rarr;</span>
@@ -1204,7 +1162,7 @@
       
       <div class="side-box">
         <h4>Related Reviews</h4>
-        <a href="https://bestpicksreviews.com/bestpicksreviews.com/" class="side-pick">
+        <a href="https://bestpicksreviews.com/review-best-ink-pens-that-dont-bleed/" class="side-pick">
             <span class="side-pick-num">&rarr;</span>
             <div class="side-pick-info">best ink pens that dont bleed</div>
           </a><a href="https://bestpicksreviews.com/review-best-portable-blender-for-smoothies-under-40/" class="side-pick">
@@ -1252,7 +1210,7 @@
   <!-- Dark Mode Toggle Script -->
   <script>
   function toggleTheme(){var n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);updateThemeIcon()}
-  function updateThemeIcon(){var d=document.documentElement.dataset.theme==='dark';var el=document.querySelector('.theme-icon');if(el)el.textContent=d?'\u2600':'\u263D'}
+  function updateThemeIcon(){var d=document.documentElement.dataset.theme==='dark';var el=document.querySelector('.theme-icon');if(el)el.textContent=d?'☀':'☽'}
   updateThemeIcon();
   </script>
 </body>
