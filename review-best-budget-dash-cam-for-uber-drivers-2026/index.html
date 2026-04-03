@@ -46,10 +46,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bestpicksreviews.com"},{"@type":"ListItem","position":2,"name":"Reviews","item":"https://bestpicksreviews.com/reviews"},{"@type":"ListItem","position":3,"name":"Best Budget Dash Cam for Uber Drivers 2026","item":"https://bestpicksreviews.com/best-budget-dash-cam-for-uber-drivers-2026/"}]}
   </script>
 
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need an interior camera for Uber?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"Does Uber reimburse dash cams?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"What is the best recording resolution for Uber evidence?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"Should I get a cloud-connected dash cam?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"What is parking mode and is it necessary?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"What is the difference between 1080p and 4K footage?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}},{"@type":"Question","name":"How much storage do I need for a dash cam?","acceptedAnswer":{"@type":"Answer","text":"Based on our research and testing, this is a common question. Check our detailed product reviews above for specific recommendations that address this."}}]}
-  </script>
+  
 
   <!-- Schema: Products + Reviews + AggregateRating -->
   <script type="application/ld+json">
@@ -96,7 +93,7 @@
 
   <!-- Dark Mode Init (prevents flash) -->
   <script>
-  (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t})();
+  (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.dataset.theme=t})();
   </script>
 
   <style>
@@ -441,7 +438,7 @@
           </div>
           <div class="author-meta">
             <span>Last Updated: April 3, 2026</span>
-            <span>&middot; 15 min read</span>
+            <span>&middot; 13 min read</span>
             <span>&middot; 12 products reviewed</span>
           </div>
           <div class="author-credential">10+ years evaluating consumer products</div>
@@ -1060,45 +1057,6 @@
 
       <!-- FAQ -->
       
-      <div class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        
-          <details class="faq-item">
-            <summary>Do I need an interior camera for Uber?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>Does Uber reimburse dash cams?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>What is the best recording resolution for Uber evidence?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>Should I get a cloud-connected dash cam?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>What is parking mode and is it necessary?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>What is the difference between 1080p and 4K footage?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-          <details class="faq-item">
-            <summary>How much storage do I need for a dash cam?</summary>
-            <p>Based on our research and testing, this is a common question. Check our product reviews above for specific recommendations that address this.</p>
-          </details>
-        
-      </div>
 
       <!-- Email Capture: Bottom -->
       
@@ -1127,7 +1085,7 @@
       <section class="recs">
         <h2>More from BestPicks</h2>
         <p>Explore our other independently researched reviews</p>
-        <div class="rec-grid"><a href="https://bestpicksreviews.com/bestpicksreviews.com/" class="rec">
+        <div class="rec-grid"><a href="https://bestpicksreviews.com/review-best-ink-pens-that-dont-bleed/" class="rec">
         <span class="rec-tag">8 products</span>
         <h4>best ink pens that dont bleed</h4>
         <span class="rec-arrow">Read Review &rarr;</span>
@@ -1204,7 +1162,7 @@
       
       <div class="side-box">
         <h4>Related Reviews</h4>
-        <a href="https://bestpicksreviews.com/bestpicksreviews.com/" class="side-pick">
+        <a href="https://bestpicksreviews.com/review-best-ink-pens-that-dont-bleed/" class="side-pick">
             <span class="side-pick-num">&rarr;</span>
             <div class="side-pick-info">best ink pens that dont bleed</div>
           </a><a href="https://bestpicksreviews.com/review-best-portable-blender-for-smoothies-under-40/" class="side-pick">
@@ -1252,7 +1210,7 @@
   <!-- Dark Mode Toggle Script -->
   <script>
   function toggleTheme(){var n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n);updateThemeIcon()}
-  function updateThemeIcon(){var d=document.documentElement.dataset.theme==='dark';var el=document.querySelector('.theme-icon');if(el)el.textContent=d?'\u2600':'\u263D'}
+  function updateThemeIcon(){var d=document.documentElement.dataset.theme==='dark';var el=document.querySelector('.theme-icon');if(el)el.textContent=d?'☀':'☽'}
   updateThemeIcon();
   </script>
 </body>
