@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Apr 2026 03:05:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 03:05:26 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -16,6 +16,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best heated blanket for cold nights</title>
+      <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
+      <description>Independent review of the best best heated blanket for cold nights products. 10 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Sat, 04 Apr 2026 03:05:26 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
+      <category>General</category>
+    </item>
     <item>
       <title>best bird feeder for backyard</title>
       <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
@@ -407,14 +415,6 @@
       <pubDate>Sat, 04 Apr 2026 02:21:37 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
       <category>Home &amp; Kitchen</category>
-    </item>
-    <item>
-      <title>best waterproof hiking boots for women</title>
-      <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
-      <description>Independent review of the best best waterproof hiking boots for women products. 8 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Sat, 04 Apr 2026 02:20:40 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
-      <category>Sports &amp; Outdoors</category>
     </item>
   </channel>
 </rss>
