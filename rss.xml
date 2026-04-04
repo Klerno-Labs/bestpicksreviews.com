@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Apr 2026 02:31:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 02:32:42 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/feed.xml" rel="self" type="application/rss+xml"/>
@@ -16,6 +16,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best outdoor toys for toddlers</title>
+      <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
+      <description>Independent review of the best best outdoor toys for toddlers products. 7 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Sat, 04 Apr 2026 02:32:42 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
+      <category>Sports &amp; Outdoors</category>
+    </item>
     <item>
       <title>best building toys for 5 year olds</title>
       <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
@@ -407,14 +415,6 @@
       <pubDate>Sat, 04 Apr 2026 01:41:52 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
       <category>General</category>
-    </item>
-    <item>
-      <title>best luxury perfume for women under $100</title>
-      <link>https://bestpicksreviews.com/bestpicksreviews.com/</link>
-      <description>Independent review of the best best luxury perfume for women under $100 products. 10 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Sat, 04 Apr 2026 01:41:01 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/bestpicksreviews.com/</guid>
-      <category>Fashion &amp; Beauty</category>
     </item>
   </channel>
 </rss>
