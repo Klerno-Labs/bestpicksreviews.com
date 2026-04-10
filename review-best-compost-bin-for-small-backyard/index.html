@@ -831,7 +831,96 @@
     </aside>
   </div>
 
-  <footer class="foot">
+  
+
+<style>
+.cmp-section{margin:32px 0;padding:0}
+.cmp-title{font-size:22px;font-weight:800;margin:0 0 16px;color:var(--text,#0f172a);letter-spacing:-.02em}
+.cmp-subtitle{font-size:14px;color:var(--text-secondary,#64748b);margin:-12px 0 16px}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border,#e2e8f0);border-radius:12px}
+.cmp-table{width:100%;border-collapse:collapse;font-size:13px;min-width:600px}
+.cmp-table th{background:var(--bg-alt,#f8fafc);padding:10px 12px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-secondary,#64748b);border-bottom:2px solid var(--border,#e2e8f0);position:sticky;top:0;white-space:nowrap}
+.cmp-table td{padding:10px 12px;border-bottom:1px solid var(--border,#e2e8f0);color:var(--text,#0f172a);vertical-align:middle}
+.cmp-table tr:last-child td{border-bottom:none}
+.cmp-table tr:hover td{background:rgba(37,99,235,.03)}
+.cmp-name{font-weight:700;display:flex;flex-direction:column;gap:2px}
+.cmp-brand{font-size:11px;color:var(--text-secondary,#64748b);font-weight:400}
+.cmp-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.03em;margin-top:3px}
+.cmp-badge-gold{background:#fef3c7;color:#92400e}
+.cmp-badge-silver{background:#f1f5f9;color:#475569}
+.cmp-badge-green{background:#ecfdf5;color:#065f46}
+.cmp-price{font-weight:700;color:var(--text,#0f172a)}
+.cmp-rating{color:#f59e0b;font-weight:600}
+.cmp-bestfor{font-size:12px;color:var(--text-secondary,#64748b)}
+@media(max-width:768px){.cmp-table{font-size:12px}.cmp-table th,.cmp-table td{padding:8px 10px}.cmp-title{font-size:18px}}
+</style>
+<div class="cmp-section">
+  <h2 class="cmp-title">Compost Bin Comparison — Size, Speed & Ease of Use</h2>
+  <p class="cmp-subtitle">5 models compared — updated April 2026. Scroll horizontally on mobile.</p>
+  <div class="cmp-wrap">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Type</th>
+          <th>Capacity</th>
+          <th>Compost Time</th>
+          <th>Price</th>
+          <th>Best For</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="cmp-name">FCMP IM4000 Tumbler<span class="cmp-brand">FCMP</span><span class="cmp-badge cmp-badge-gold">Our Top Pick</span></div></td>
+          <td>Dual-chamber tumbler</td>
+          <td>37 gal</td>
+          <td>4-6 weeks</td>
+          <td class="cmp-price">$100</td>
+          <td class="cmp-bestfor">Fastest composting</td>
+          <td class="cmp-rating">4.5/5</td>
+        </tr>
+        <tr>
+          <td><div class="cmp-name">HOTBIN 200L Mk.2<span class="cmp-brand">HOTBIN</span><span class="cmp-badge cmp-badge-silver">Runner Up</span></div></td>
+          <td>Hot composter</td>
+          <td>52 gal</td>
+          <td>30-90 days</td>
+          <td class="cmp-price">$150</td>
+          <td class="cmp-bestfor">Year-round composting</td>
+          <td class="cmp-rating">4.4/5</td>
+        </tr>
+        <tr>
+          <td><div class="cmp-name">Geobin Expandable<span class="cmp-brand">Geobin</span><span class="cmp-badge cmp-badge-green">Best Value</span></div></td>
+          <td>Open bin</td>
+          <td>246 gal</td>
+          <td>3-6 months</td>
+          <td class="cmp-price">$36</td>
+          <td class="cmp-bestfor">Large volume, low cost</td>
+          <td class="cmp-rating">4.1/5</td>
+        </tr>
+        <tr>
+          <td><div class="cmp-name">Green Johanna 330L<span class="cmp-brand">Green Johanna</span></div></td>
+          <td>Closed static</td>
+          <td>87 gal</td>
+          <td>3-6 months</td>
+          <td class="cmp-price">$130</td>
+          <td class="cmp-bestfor">Food + garden waste</td>
+          <td class="cmp-rating">4.0/5</td>
+        </tr>
+        <tr>
+          <td><div class="cmp-name">Blackwall 220L<span class="cmp-brand">Blackwall</span></div></td>
+          <td>Converter bin</td>
+          <td>58 gal</td>
+          <td>6-12 months</td>
+          <td class="cmp-price">$40</td>
+          <td class="cmp-bestfor">Tight spaces</td>
+          <td class="cmp-rating">4.2/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<footer class="foot">
     <div class="foot-in">
       <div class="foot-col">
         <h5>BestPicks</h5>
