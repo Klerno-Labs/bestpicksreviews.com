@@ -4,31 +4,31 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bestpicksreviews.com/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bestpicksreviews.com/about.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bestpicksreviews.com/contact.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bestpicksreviews.com/privacy.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>https://bestpicksreviews.com/terms.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
@@ -4970,6 +4970,16 @@
     <image:image>
       <image:loc>https://bestpicksreviews.com/review-best-smart-kitchen-appliances-under-200/og-image.png</image:loc>
       <image:title>best smart kitchen appliances under $200</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bestpicksreviews.com/tool-ac-size-calculator/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bestpicksreviews.com/tool-ac-size-calculator/og-image.png</image:loc>
+      <image:title>AC Size Calculator — What Size Mini-Split Do You Need?</image:title>
     </image:image>
   </url>
 </urlset>
