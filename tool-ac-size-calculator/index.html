@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AC Size Calculator — What Size Mini-Split Do You Need?</title>
+<meta name="description" content="Free AC size calculator. Enter your room dimensions and get an instant BTU recommendation with the perfect mini-split match for your space.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://bestpicksreviews.com/tool-ac-size-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AC Size Calculator — What Size Mini-Split Do You Need?">
+<meta property="og:description" content="Free AC size calculator. Enter your room dimensions and get an instant BTU recommendation with the perfect mini-split match for your space.">
+<meta property="og:url" content="https://bestpicksreviews.com/tool-ac-size-calculator/">
+<meta property="og:site_name" content="BestPicks Reviews">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AC Size Calculator — What Size Mini-Split Do You Need?">
+<meta name="twitter:description" content="Free AC size calculator. Enter your room dimensions and get an instant BTU recommendation with the perfect mini-split match for your space.">
+<link rel="alternate" type="application/rss+xml" title="BestPicks Reviews RSS" href="https://bestpicksreviews.com/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{const t=localStorage.getItem('theme');if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"AC Size Calculator — What Size Mini-Split Do You Need?",
+  "url":"https://bestpicksreviews.com/tool-ac-size-calculator/",
+  "applicationCategory":"UtilityApplication",
+  "operatingSystem":"Web",
+  "description":"Free AC size calculator. Enter your room dimensions and get an instant BTU recommendation with the perfect mini-split match for your space.",
+  "publisher":{"@type":"Organization","name":"BestPicks Reviews","url":"https://bestpicksreviews.com"}
+},{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I calculate what size AC I need?","acceptedAnswer":{"@type":"Answer","text":"Multiply room length x width for square footage. Multiply by 20 BTU per sq ft as a baseline. Adjust up for sunny rooms, high ceilings, kitchens, or multiple occupants."}},
+    {"@type":"Question","name":"What size mini-split do I need for 500 sq ft?","acceptedAnswer":{"@type":"Answer","text":"A 12,000 BTU mini-split handles up to 550 sq ft in standard conditions. For sunny or high-ceiling rooms, consider 18,000 BTU."}},
+    {"@type":"Question","name":"Is a mini-split cheaper than central AC?","acceptedAnswer":{"@type":"Answer","text":"Yes. Mini-splits cost $540-$1,300 installed DIY vs $3,000-$7,000 for central AC. They're also 30-40% more energy efficient with no ductwork losses."}}
+  ]
+},{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://bestpicksreviews.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://bestpicksreviews.com/tool-ac-size-calculator/"},
+    {"@type":"ListItem","position":3,"name":"AC Size Calculator"}
+  ]
+}]
+</script>
+<style>
+:root{--bg:#fff;--bg2:#f8f9fa;--bg3:#f0f2f5;--text:#1a1a2e;--text2:#4a5568;--text3:#718096;--border:#e2e8f0;--accent:#2563eb;--accent2:#1d4ed8;--gold:#f59e0b;--green:#10b981;--shadow:0 1px 3px rgba(0,0,0,.08);--shadow-lg:0 10px 25px rgba(0,0,0,.1);--radius:12px}
+.dark{--bg:#0f172a;--bg2:#1e293b;--bg3:#334155;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,.3);--shadow-lg:0 10px 25px rgba(0,0,0,.4)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:18px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border);padding:12px 0}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:18px;color:var(--text)}
+.logo span{color:var(--accent)}
+.theme-btn{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:14px;color:var(--text)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 50%,#1d4ed8 100%);color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,42px);font-weight:800;margin-bottom:12px;line-height:1.2}
+.hero p{font-size:18px;opacity:.9;max-width:600px;margin:0 auto 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500}
+
+/* Calculator */
+.calc-wrap{max-width:680px;margin:-40px auto 0;padding:0 20px;position:relative;z-index:10}
+.calc{background:var(--bg);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-lg);padding:32px;position:relative}
+.calc h2{font-size:22px;font-weight:700;margin-bottom:24px;text-align:center}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;color:var(--text)}
+.field-hint{font-size:13px;color:var(--text3);margin-bottom:6px}
+.field input,.field select{width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:10px;font-size:16px;background:var(--bg2);color:var(--text);font-family:inherit;transition:border-color .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:500px){.row{grid-template-columns:1fr}}
+
+.calc-btn{width:100%;padding:16px;background:var(--accent);color:#fff;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:8px}
+.calc-btn:hover{background:var(--accent2)}
+
+/* Result */
+.result{display:none;margin-top:24px;padding:24px;background:var(--bg2);border-radius:12px;border:2px solid var(--accent);text-align:center}
+.result.show{display:block;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.btu-number{font-size:48px;font-weight:800;color:var(--accent);line-height:1.2}
+.btu-label{font-size:14px;color:var(--text2);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.rec-card{margin-top:20px;background:var(--bg);border:2px solid var(--gold);border-radius:12px;padding:20px;text-align:left}
+.rec-badge{display:inline-block;background:var(--gold);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;text-transform:uppercase;margin-bottom:8px}
+.rec-name{font-size:20px;font-weight:700;margin-bottom:4px}
+.rec-price{font-size:24px;font-weight:800;color:var(--green)}
+.rec-price s{font-size:16px;color:var(--text3);font-weight:400;margin-left:8px}
+.rec-features{list-style:none;margin:12px 0;padding:0}
+.rec-features li{padding:4px 0;font-size:14px;color:var(--text2)}
+.rec-features li::before{content:"\2713";color:var(--green);font-weight:700;margin-right:8px}
+.rec-cta{display:block;text-align:center;padding:14px;background:var(--gold);color:#fff;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;margin-top:12px;transition:opacity .2s}
+.rec-cta:hover{opacity:.9;text-decoration:none}
+.rec-disclosure{font-size:11px;color:var(--text3);margin-top:8px;text-align:center}
+
+/* Info sections */
+.content{max-width:680px;margin:0 auto;padding:40px 20px}
+.content h2{font-size:24px;font-weight:700;margin:32px 0 16px}
+.content h3{font-size:18px;font-weight:600;margin:24px 0 8px}
+.content p{color:var(--text2);margin-bottom:16px}
+.content ul{margin:0 0 16px 20px;color:var(--text2)}
+.content li{margin-bottom:6px}
+
+/* FAQ */
+.faq{background:var(--bg2);border-radius:12px;padding:24px;margin:24px 0}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border:none}
+.faq-q{font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";font-size:22px;color:var(--accent);transition:transform .2s}
+.faq-q.open::after{transform:rotate(45deg)}
+.faq-a{display:none;padding-top:8px;color:var(--text2);font-size:15px}
+.faq-a.open{display:block}
+
+/* Cross-links */
+.related{max-width:680px;margin:0 auto;padding:0 20px 40px}
+.related h2{font-size:22px;font-weight:700;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.related-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;transition:box-shadow .2s}
+.related-card:hover{box-shadow:var(--shadow-lg);text-decoration:none}
+.related-card h4{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.3}
+.related-card span{font-size:12px;color:var(--accent)}
+
+/* Footer */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 20px;text-align:center;font-size:13px;color:var(--text3)}
+footer a{color:var(--text3)}
+footer p{margin-bottom:8px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* Banner */
+.banner-wrap{max-width:680px;margin:24px auto;padding:0 20px;text-align:center}
+.banner-wrap img{max-width:100%;height:auto;border-radius:8px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="https://bestpicksreviews.com/" class="logo">BestPicks<span>Reviews</span></a>
+<div style="display:flex;gap:12px;align-items:center">
+<a href="https://bestpicksreviews.com/" style="font-size:14px;font-weight:500">All Reviews</a>
+<button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-badge">🧮 Free Tool — No signup required</div>
+<h1>What Size Air Conditioner Do You Actually Need?</h1>
+<p>Stop guessing. Enter your room details and get an instant BTU recommendation with the exact mini-split that fits your space and budget.</p>
+</section>
+
+<div class="calc-wrap">
+<div class="calc">
+<h2>Room Size Calculator</h2>
+
+<p style="font-size:13px;color:var(--text3);text-align:center;margin-bottom:20px">
+<em>Affiliate disclosure: This tool may recommend products we earn a commission from. <a href="https://bestpicksreviews.com/review-best-ink-pens-that-dont-bleed/disclosure.html">Full disclosure</a>.</em>
+</p>
+
+<div class="row">
+<div class="field">
+<label>Room Length (ft)</label>
+<input type="number" id="length" placeholder="e.g. 20" min="1" max="200">
+</div>
+<div class="field">
+<label>Room Width (ft)</label>
+<input type="number" id="width" placeholder="e.g. 15" min="1" max="200">
+</div>
+</div>
+
+<div class="field">
+<label>Ceiling Height</label>
+<select id="ceiling">
+<option value="1">Standard (8 ft)</option>
+<option value="1.1">Slightly Tall (9 ft)</option>
+<option value="1.2">High Ceilings (10+ ft)</option>
+</select>
+</div>
+
+<div class="field">
+<label>Sun Exposure</label>
+<select id="sun">
+<option value="1">Average — some windows</option>
+<option value="0.9">Shaded — north-facing, trees</option>
+<option value="1.15">Very Sunny — south/west-facing, lots of glass</option>
+</select>
+</div>
+
+<div class="field">
+<label>Room Type</label>
+<select id="room">
+<option value="1">Bedroom / Living Room</option>
+<option value="1.1">Kitchen (extra heat from cooking)</option>
+<option value="1">Home Office</option>
+<option value="1.15">Garage / Workshop</option>
+<option value="1.05">Sunroom / Bonus Room</option>
+</select>
+</div>
+
+<div class="field">
+<label>How many people usually in the room?</label>
+<select id="people">
+<option value="0">1-2 people</option>
+<option value="600">3-4 people</option>
+<option value="1200">5+ people</option>
+</select>
+</div>
+
+<button class="calc-btn" onclick="calculate()">Calculate My BTU Needs →</button>
+
+<div class="result" id="result">
+<div class="btu-label">You Need</div>
+<div class="btu-number" id="btu-display">—</div>
+<div class="btu-label">BTU</div>
+<p style="margin-top:8px;font-size:14px;color:var(--text2)" id="sqft-display"></p>
+
+<div class="rec-card" id="rec-card">
+<div class="rec-badge" id="rec-badge">Perfect Match</div>
+<div class="rec-name" id="rec-name"></div>
+<div class="rec-price" id="rec-price"></div>
+<ul class="rec-features">
+<li>20 SEER2 Energy Efficient — saves 30-40% vs window units</li>
+<li>21 dB Whisper-Quiet Sleep Mode</li>
+<li>DIY Install — Pre-charged, no HVAC tech needed</li>
+<li>7-Year Compressor + 5-Year Parts Warranty</li>
+<li>WiFi Ready — Control from your phone</li>
+<li>Free Shipping + 30-Day Returns</li>
+</ul>
+<a class="rec-cta" id="rec-cta" rel="sponsored" target="_blank">View on Cozeware.com → (paid link)</a>
+<p class="rec-disclosure">As an affiliate, we may earn a commission from qualifying purchases at no extra cost to you.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Cozeware Banner -->
+<div class="banner-wrap">
+<a rel="sponsored" href="https://www.awin1.com/cread.php?s=4673166&v=123618&q=595442&r=2841178" target="_blank">
+<img src="https://www.awin1.com/cshow.php?s=4673166&v=123618&q=595442&r=2841178" alt="Cozeware Mini-Split Air Conditioners" loading="lazy">
+</a>
+</div>
+
+<div class="content">
+<h2>How to Calculate the Right AC Size</h2>
+<p>Getting the wrong size air conditioner wastes money in both directions. Too small and it runs constantly, driving up your electric bill without ever reaching temperature. Too large and it short-cycles — turning on and off repeatedly — which wears out the compressor and leaves you with clammy, humid air.</p>
+
+<p>The formula is simple: <strong>Square footage × 20 BTU = baseline</strong>. Then adjust for your specific conditions.</p>
+
+<h3>Adjustment Factors</h3>
+<ul>
+<li><strong>Sunny rooms</strong> — Add 10-15%. South and west-facing windows get pounded by afternoon sun.</li>
+<li><strong>High ceilings</strong> — Add 10-20%. More air volume means more work for the compressor.</li>
+<li><strong>Kitchens</strong> — Add 10%. Stoves, ovens, and dishwashers pump heat into the room.</li>
+<li><strong>Multiple occupants</strong> — Add 600 BTU per person beyond 2. Bodies are space heaters.</li>
+<li><strong>Shaded rooms</strong> — Subtract 10%. Trees and overhangs are free insulation.</li>
+</ul>
+
+<h2>Why Mini-Splits Beat Window Units</h2>
+<p>Window air conditioners are cheap upfront but expensive to run. A typical window unit has a SEER rating of 10-12. A modern mini-split runs at 20+ SEER — meaning it uses <strong>40-50% less electricity</strong> for the same cooling.</p>
+<p>Mini-splits are also whisper-quiet (21 dB vs 50+ dB for window units), don't block your window, and double as heaters in winter. The upfront cost pays for itself within 2-3 years in energy savings.</p>
+
+<h2>Quick Reference: Room Size to BTU</h2>
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;font-size:15px;margin:16px 0">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px;font-weight:600">Room Size</th>
+<th style="text-align:left;padding:10px;font-weight:600">BTU Needed</th>
+<th style="text-align:left;padding:10px;font-weight:600">Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:10px">150-300 sq ft</td>
+<td style="padding:10px">6,000-8,000</td>
+<td style="padding:10px">12,000 BTU unit (oversized for reliability)</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:10px">300-550 sq ft</td>
+<td style="padding:10px">8,000-12,000</td>
+<td style="padding:10px">12,000 BTU unit</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:10px">550-900 sq ft</td>
+<td style="padding:10px">12,000-18,000</td>
+<td style="padding:10px">18,000 BTU unit</td>
+</tr>
+<tr>
+<td style="padding:10px">900-1,400 sq ft</td>
+<td style="padding:10px">18,000-24,000</td>
+<td style="padding:10px">24,000 BTU unit</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="faq">
+<h2 style="margin-top:0">Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">How do I calculate what size AC I need?</div>
+<div class="faq-a">Multiply room length × width for square footage. Multiply by 20 BTU per sq ft as a baseline. Adjust up for sunny rooms, high ceilings, kitchens, or multiple occupants. Our calculator above does this automatically.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">What size mini-split do I need for 500 sq ft?</div>
+<div class="faq-a">A 12,000 BTU mini-split handles up to 550 sq ft in standard conditions. For sunny or high-ceiling rooms, step up to 18,000 BTU to avoid the unit running constantly.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">Is a mini-split cheaper than central AC?</div>
+<div class="faq-a">Yes. Mini-splits cost $540-$1,300 installed DIY vs $3,000-$7,000+ for central AC professional installation. They're also 30-40% more energy efficient since there's no ductwork losing cool air in the attic.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">Can I install a mini-split myself?</div>
+<div class="faq-a">Yes — many modern mini-splits come pre-charged with refrigerant and include all mounting hardware. You'll need basic tools and about 4-6 hours. No HVAC license required for pre-charged units.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">What does SEER2 rating mean?</div>
+<div class="faq-a">SEER2 measures cooling efficiency. Higher = cheaper to run. A 20 SEER2 unit uses about 40% less electricity than a 12 SEER window unit. The minimum federal standard is 14 SEER2 for new units as of 2023.</div>
+</div>
+</div>
+</div>
+
+
+<div class="related">
+<h2>Related Reviews</h2>
+<div class="related-grid">
+<a href="https://bestpicksreviews.com/review-best-cooler-for-beach-trips-under-50/" class="related-card"><h4>best cooler for beach trips under $50</h4><span>Read Review →</span></a>
+<a href="https://bestpicksreviews.com/review-most-reliable-home-gym-equipment-under-300/" class="related-card"><h4>most reliable home gym equipment under $300</h4><span>Read Review →</span></a>
+<a href="https://bestpicksreviews.com/review-best-home-dumbbells-set-under-100/" class="related-card"><h4>best home dumbbells set under $100</h4><span>Read Review →</span></a>
+<a href="https://bestpicksreviews.com/review-top-espresso-machine-under-300-for-home/" class="related-card"><h4>top espresso machine under $300 for home</h4><span>Read Review →</span></a>
+<a href="https://bestpicksreviews.com/review-best-countertop-ice-maker-for-home-bar/" class="related-card"><h4>best countertop ice maker for home bar</h4><span>Read Review →</span></a>
+<a href="https://bestpicksreviews.com/review-best-monitor-light-bar-for-home-office/" class="related-card"><h4>best monitor light bar for home office</h4><span>Read Review →</span></a>
+</div>
+</div>
+
+
+<footer>
+<p><strong>BestPicks Reviews</strong> — Independent product research you can trust.</p>
+<p>As an affiliate, we may earn commissions from qualifying purchases. This does not affect our recommendations or editorial independence.</p>
+<p>© 2026 BestPicks Reviews. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleTheme(){const d=document.documentElement;d.classList.toggle('dark');localStorage.setItem('theme',d.classList.contains('dark')?'dark':'light')}
+
+function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+
+const products=[
+  {maxBtu:12000,name:"Cozeware E-Save 12K (115V)",price:"$670",msrp:"$740",series:"E-Save",note:"AI chip technology for maximum energy savings",link:"https://www.awin1.com/awclick.php?gid=600168&mid=123618&awinaffid=2841178&linkid=4724900&clickref=tool-ac-calc-esave12"},
+  {maxBtu:12000,name:"Cozeware Visio 12K (115V)",price:"$620",msrp:"$670",series:"Visio",note:"Best reviewed — 4.92/5 stars",link:"https://www.awin1.com/awclick.php?gid=600168&mid=123618&awinaffid=2841178&linkid=4724900&clickref=tool-ac-calc-visio12"},
+  {maxBtu:12000,name:"Cozeware Standard 12K (230V)",price:"$540",msrp:"$580",series:"Standard",note:"Best value — lowest price mini-split on the market",link:"https://www.awin1.com/awclick.php?gid=600168&mid=123618&awinaffid=2841178&linkid=4724900&clickref=tool-ac-calc-std12"},
+  {maxBtu:18000,name:"Cozeware E-Save 18K (230V)",price:"$930",msrp:"$1,000",series:"E-Save",note:"AI chip — covers rooms up to 900 sq ft",link:"https://www.awin1.com/awclick.php?gid=600168&mid=123618&awinaffid=2841178&linkid=4724900&clickref=tool-ac-calc-esave18"},
+  {maxBtu:24000,name:"Cozeware E-Save 24K (230V)",price:"$1,300",msrp:"$1,400",series:"E-Save",note:"AI chip — covers rooms up to 1,400 sq ft",link:"https://www.awin1.com/awclick.php?gid=600168&mid=123618&awinaffid=2841178&linkid=4724900&clickref=tool-ac-calc-esave24"}
+];
+
+function calculate(){
+  const l=parseFloat(document.getElementById('length').value);
+  const w=parseFloat(document.getElementById('width').value);
+  if(!l||!w||l<1||w<1){alert('Please enter room length and width');return}
+
+  const sqft=l*w;
+  const ceil=parseFloat(document.getElementById('ceiling').value);
+  const sun=parseFloat(document.getElementById('sun').value);
+  const room=parseFloat(document.getElementById('room').value);
+  const people=parseInt(document.getElementById('people').value);
+
+  let btu=Math.round(sqft*20*ceil*sun*room+people);
+  // Round to nearest 1000
+  btu=Math.ceil(btu/1000)*1000;
+
+  document.getElementById('btu-display').textContent=btu.toLocaleString();
+  document.getElementById('sqft-display').textContent=sqft.toFixed(0)+' sq ft room — '+Math.round(btu/sqft)+' BTU per sq ft';
+
+  // Find best product match
+  let rec;
+  if(btu<=12000){
+    // For smaller rooms, recommend by value
+    rec=btu<=8000?products[2]:products[1]; // Standard for tiny, Visio for medium
+  }else if(btu<=18000){
+    rec=products[3];
+  }else{
+    rec=products[4];
+  }
+
+  document.getElementById('rec-badge').textContent=rec.series+' Series — Perfect Match';
+  document.getElementById('rec-name').textContent=rec.name;
+  document.getElementById('rec-price').innerHTML=rec.price+' <s>'+rec.msrp+'</s>';
+  document.getElementById('rec-cta').href=rec.link;
+
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BBND0GGTSE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BBND0GGTSE')</script>
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3263224559747875" crossorigin="anonymous"></script>
+
+</body>
+</html>
