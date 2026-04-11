@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 14:40:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 14:43:09 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -17,6 +17,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best foam roller for back pain</title>
+      <link>https://bestpicksreviews.com/review-best-foam-roller-for-back-pain/</link>
+      <description>Independent review of the best best foam roller for back pain products. 10 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 20:03:13 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-foam-roller-for-back-pain/</guid>
+      <category>General</category>
+    </item>
     <item>
       <title>best stud finder that actually works</title>
       <link>https://bestpicksreviews.com/review-best-stud-finder-that-actually-works/</link>
@@ -408,14 +416,6 @@
       <pubDate>Tue, 07 Apr 2026 13:17:29 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/review-best-luxury-serum-for-glowing-skin/</guid>
       <category>Sports &amp; Outdoors</category>
-    </item>
-    <item>
-      <title>best french beauty products worth the price</title>
-      <link>https://bestpicksreviews.com/review-best-french-beauty-products-worth-the-price/</link>
-      <description>Independent review of the best best french beauty products worth the price products. 4 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Tue, 07 Apr 2026 13:16:10 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-french-beauty-products-worth-the-price/</guid>
-      <category>Fashion &amp; Beauty</category>
     </item>
   </channel>
 </rss>
