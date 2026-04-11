@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 14:20:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 14:22:24 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -17,6 +17,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best electric kettle for pour over coffee</title>
+      <link>https://bestpicksreviews.com/review-best-electric-kettle-for-pour-over-coffee/</link>
+      <description>Independent review of the best best electric kettle for pour over coffee products. 9 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 19:26:56 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-electric-kettle-for-pour-over-coffee/</guid>
+      <category>Home &amp; Kitchen</category>
+    </item>
     <item>
       <title>best wireless keyboards for mac</title>
       <link>https://bestpicksreviews.com/review-best-wireless-keyboards-for-mac/</link>
@@ -408,14 +416,6 @@
       <pubDate>Tue, 07 Apr 2026 13:00:39 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/review-best-open-ear-headphones-for-running/</guid>
       <category>Technology</category>
-    </item>
-    <item>
-      <title>best chew proof dog collar heavy duty</title>
-      <link>https://bestpicksreviews.com/review-best-chew-proof-dog-collar-heavy-duty/</link>
-      <description>Independent review of the best best chew proof dog collar heavy duty products. 5 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Tue, 07 Apr 2026 01:42:35 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-chew-proof-dog-collar-heavy-duty/</guid>
-      <category>Pets</category>
     </item>
   </channel>
 </rss>
