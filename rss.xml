@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 15:00:26 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 15:02:25 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -17,6 +17,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best dog crate for separation anxiety</title>
+      <link>https://bestpicksreviews.com/review-best-dog-crate-for-separation-anxiety/</link>
+      <description>Independent review of the best best dog crate for separation anxiety products. 5 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 20:38:14 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-dog-crate-for-separation-anxiety/</guid>
+      <category>Pets</category>
+    </item>
     <item>
       <title>best automatic cat feeder for wet food</title>
       <link>https://bestpicksreviews.com/review-best-automatic-cat-feeder-for-wet-food/</link>
@@ -408,14 +416,6 @@
       <pubDate>Fri, 10 Apr 2026 15:22:00 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/tool-skincare-routine-builder/</guid>
       <category>Sports &amp; Outdoors</category>
-    </item>
-    <item>
-      <title>AC Size Calculator — What Size Mini-Split Do You Need?</title>
-      <link>https://bestpicksreviews.com/tool-ac-size-calculator/</link>
-      <description>Independent review of the best ac size calculator — what size mini-split do you need? products. 5 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Fri, 10 Apr 2026 15:21:59 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/tool-ac-size-calculator/</guid>
-      <category>General</category>
     </item>
   </channel>
 </rss>
