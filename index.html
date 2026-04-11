@@ -22,7 +22,8 @@
   <link rel="sitemap" type="application/xml" href="https://bestpicksreviews.com/sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"BestPicks Reviews","url":"https://bestpicksreviews.com","description":"Independent product reviews powered by AI research. Find the best products without the hours of research.","publisher":{"@type":"Organization","name":"BestPicks Reviews","url":"https://bestpicksreviews.com"},"potentialAction":{"@type":"SearchAction","target":"https://bestpicksreviews.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","name":"BestPicks Reviews","url":"https://bestpicksreviews.com","logo":"https://bestpicksreviews.com/favicon.png","sameAs":[],"description":"Independent product reviews powered by AI research and verified consumer data."}]}</script>
   <style>
     :root {
@@ -32,7 +33,7 @@
       --bg-card: #ffffff;
       --text: #0f172a;
       --text-secondary: #475569;
-      --text-muted: #94a3b8;
+      --text-muted: #6b7a87;
       --border: #e2e8f0;
       --border-hover: #cbd5e1;
       --blue: #2563eb;
@@ -217,12 +218,7 @@
       .section-header { flex-direction: column; }
     }
   </style>
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-41TWPE6FGH"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-41TWPE6FGH')</script>
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3263224559747875" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="nav">
@@ -237,6 +233,7 @@
     </div>
   </nav>
 
+  <main>
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-chip"><span class="hero-chip-dot"></span> 502 reviews published &mdash; updated daily</div>
@@ -6457,6 +6454,7 @@
     </div>
   </div>
 
+  </main>
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col">
@@ -6477,7 +6475,7 @@
       </div>
     </div>
     <div class="footer-disc">
-      &copy; 2026 BestPicks Reviews. All rights reserved. As an Amazon Associate I earn from qualifying purchases. BestPicks Reviews is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click links and make a purchase, we may earn a commission at no additional cost to you. Prices and availability as of 2026-04-10.
+      &copy; 2026 BestPicks Reviews. All rights reserved. As an Amazon Associate I earn from qualifying purchases. BestPicks Reviews is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click links and make a purchase, we may earn a commission at no additional cost to you. Prices and availability as of 2026-04-11.
     </div>
   </footer>
 
@@ -6517,6 +6515,15 @@
         if (noResults) noResults.style.display = visible === 0 && q ? 'block' : 'none';
       });
     })();
+  </script>
+
+  <!-- Google Analytics 4 (deferred — no render blocking) -->
+  <script>
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-41TWPE6FGH';s.async=true;document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-41TWPE6FGH')};},{once:true});
+  </script>
+  <!-- Google AdSense (deferred) -->
+  <script>
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3263224559747875';s.async=true;s.crossOrigin='anonymous';document.head.appendChild(s)},{once:true});
   </script>
 </body>
 </html>
