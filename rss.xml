@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 14:53:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 14:56:41 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -17,6 +17,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best baby carrier for hiking</title>
+      <link>https://bestpicksreviews.com/review-best-baby-carrier-for-hiking/</link>
+      <description>Independent review of the best best baby carrier for hiking products. 10 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 20:27:38 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-baby-carrier-for-hiking/</guid>
+      <category>Sports &amp; Outdoors</category>
+    </item>
     <item>
       <title>best toddler headphones for airplane</title>
       <link>https://bestpicksreviews.com/review-best-toddler-headphones-for-airplane/</link>
@@ -408,14 +416,6 @@
       <pubDate>Tue, 07 Apr 2026 13:26:51 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/review-best-smart-kitchen-appliances-under-200/</guid>
       <category>Technology</category>
-    </item>
-    <item>
-      <title>best travel coffee mug with temperature control</title>
-      <link>https://bestpicksreviews.com/review-best-travel-coffee-mug-with-temperature-control/</link>
-      <description>Independent review of the best best travel coffee mug with temperature control products. 10 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Tue, 07 Apr 2026 13:24:42 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-travel-coffee-mug-with-temperature-control/</guid>
-      <category>Home &amp; Kitchen</category>
     </item>
   </channel>
 </rss>
