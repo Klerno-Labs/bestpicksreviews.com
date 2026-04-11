@@ -7,7 +7,7 @@
     <link>https://bestpicksreviews.com</link>
     <description>Independent product reviews powered by AI research</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2026 14:56:41 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 14:58:28 GMT</lastBuildDate>
     <generator>BestPicks Reviews Feed Generator</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://bestpicksreviews.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -17,6 +17,14 @@
       <title>BestPicks Reviews</title>
       <link>https://bestpicksreviews.com</link>
     </image>
+    <item>
+      <title>best kids tablet for learning under $100</title>
+      <link>https://bestpicksreviews.com/review-best-kids-tablet-for-learning-under-100/</link>
+      <description>Independent review of the best best kids tablet for learning under $100 products. 3 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
+      <pubDate>Fri, 03 Apr 2026 20:30:45 GMT</pubDate>
+      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-kids-tablet-for-learning-under-100/</guid>
+      <category>Technology</category>
+    </item>
     <item>
       <title>best baby carrier for hiking</title>
       <link>https://bestpicksreviews.com/review-best-baby-carrier-for-hiking/</link>
@@ -408,14 +416,6 @@
       <pubDate>Fri, 10 Apr 2026 14:29:50 GMT</pubDate>
       <guid isPermaLink="true">https://bestpicksreviews.com/tool-ac-size-calculator/</guid>
       <category>General</category>
-    </item>
-    <item>
-      <title>best smart kitchen appliances under $200</title>
-      <link>https://bestpicksreviews.com/review-best-smart-kitchen-appliances-under-200/</link>
-      <description>Independent review of the best best smart kitchen appliances under $200 products. 8 products analyzed with detailed comparisons, pros and cons, and buying recommendations.</description>
-      <pubDate>Tue, 07 Apr 2026 13:26:51 GMT</pubDate>
-      <guid isPermaLink="true">https://bestpicksreviews.com/review-best-smart-kitchen-appliances-under-200/</guid>
-      <category>Technology</category>
     </item>
   </channel>
 </rss>
