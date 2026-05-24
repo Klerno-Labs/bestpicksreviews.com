@@ -1673,5 +1673,36 @@
   <script>
   function handleSubscribe(f,id){var e=f.email.value,b=f.querySelector('.email-btn'),m=document.getElementById(id+'-msg');if(!e)return false;b.disabled=true;b.textContent='Subscribing...';fetch('https://app.pegrio.com/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:e,source:'affiliate',page:location.pathname})}).then(function(){m.textContent='You\'re in! Check your inbox.';m.style.color='#16a34a';f.email.value='';b.textContent='Subscribed \u2713';}).catch(function(){m.textContent='Something went wrong. Try again.';m.style.color='#dc2626';b.disabled=false;b.textContent='Subscribe Free';});return false}
   </script>
+<!-- Sticky mobile CTA bar (injected by Bobby — mobile conversion lever) -->
+<div id="bp-sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1f2937;color:#fff;padding:.65rem .85rem;box-shadow:0 -4px 20px rgba(0,0,0,.25);font-family:var(--font,system-ui,-apple-system,sans-serif)">
+  <div style="display:flex;align-items:center;gap:.65rem;max-width:720px;margin:0 auto">
+    <div style="flex:1;min-width:0">
+      <div style="font-size:.65rem;color:#fbbf24;font-weight:800;letter-spacing:.08em;text-transform:uppercase">★ Our top pick</div>
+      <div style="font-size:.92rem;font-weight:600;line-height:1.25;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">Gornation Workout Rings Set</div>
+    </div>
+    <a href="https://www.amazon.com/s?k=Gornation%20Workout%20Rings%20Set&amp;tag=bestpicksrevi-20-gymnasti" target="_blank" rel="sponsored nofollow noopener" style="flex-shrink:0;padding:.6rem 1rem;background:#fbbf24;color:#1c1c1f;text-decoration:none;font-weight:800;border-radius:8px;font-size:.92rem;white-space:nowrap">Check&nbsp;Price&nbsp;→</a>
+  </div>
+</div>
+<style>
+@media (max-width: 768px) {
+  #bp-sticky-cta { display:block !important; }
+  body { padding-bottom: 80px; }
+}
+</style>
+<script>
+(function(){
+  // Show the sticky bar only after the user has scrolled past the Quick Pick card
+  // (~600px from top). Prevents double-up with the in-content CTA.
+  var bar = document.getElementById('bp-sticky-cta');
+  if (!bar) return;
+  function update(){
+    if (window.innerWidth > 768) { bar.style.display = 'none'; return; }
+    bar.style.display = (window.scrollY > 600) ? 'block' : 'none';
+  }
+  update();
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+})();
+</script>
 </body>
 </html>
