@@ -92,6 +92,17 @@ class SiteSafetyTests(unittest.TestCase):
         self.rebuild()
         self.assertTrue(any("redirect destination" in error for error in validate_site(self.root).errors))
 
+    def test_nested_product_markup_without_ratings_cannot_trigger_unverified_rich_results(self):
+        for product_type in ("Product", ["Thing", "Product"], "https://schema.org/Product"):
+            with self.subTest(product_type=product_type):
+                data = {"@context": "https://schema.org", "@graph": [{"@type": "Article", "about": [{"@type": product_type, "name": "Unverified product"}]}]}
+                self.page(self.reviews[0], '<script type="application/ld+json">' + json.dumps(data) + '</script>')
+                errors = validate_site(self.root).errors
+                self.assertTrue(any("unsupported Product markup" in error for error in errors))
+                self.assertFalse(any("aggregateRating" in error for error in errors))
+        self.page(self.reviews[0], '<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Source-based guide"}</script>')
+        self.assertEqual(validate_site(self.root).errors, [])
+
     def test_redirect_chains_fail(self):
         mapping = {"/review-old/": "/review-new/", "/review-new/": self.reviews[0]}
         for source, destination in mapping.items():
