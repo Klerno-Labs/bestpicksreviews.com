@@ -4,9 +4,11 @@ Run these from the repository root; they use Python 3.11+ and Node 22+ with no p
 
 ```sh
 python3 scripts/rebuild_sitemap.py
+python3 scripts/version_assets.py
 python3 scripts/build_discovery.py
 python3 scripts/validate.py
 python3 scripts/build_discovery.py --check
+python3 scripts/version_assets.py --check
 python3 -m unittest discover -s scripts -p 'test_*.py'
 node --test scripts/analytics.test.mjs
 ```
@@ -26,6 +28,8 @@ Legacy aliases in `redirects.json` are checked separately: each source must have
 The analytics tests use a small in-memory DOM and fake Google transport to exercise consent and event handling without collecting analytics. GitHub Actions runs the same checks on pushes and pull requests. Branch protection must separately require the validation job if merges should be blocked automatically.
 
 ## Discovery and ongoing delivery
+
+Local stylesheet and script URLs carry a digest of their contents. After changing an asset, run `version_assets.py` and then `build_discovery.py`; CI checks both. Returning browsers receive the matching release without needing to clear cached assets. This does not change canonical page URLs or editorial dates.
 
 The visible homepage library is the source for the human directory, `guides.json` and `llms.txt`. `build_discovery.py` refuses to omit or duplicate a guide. Add a new guide to that library with a neutral, descriptive title and category, regenerate discovery and sitemap files, then validate. The human directory works without JavaScript; search is progressive enhancement. A JSON directory and llms.txt are optional conveniences, not Google ranking factors or guaranteed AI citation mechanisms.
 

@@ -6,6 +6,7 @@ import argparse
 import json
 import re
 from site_inventory import ORIGIN, inventory
+from version_assets import version_html
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -63,7 +64,7 @@ def render(root):
     for key, category in categories:
         llms += f'\n## {category}\n'
         llms += ''.join(f'- [{e["title"]}]({e["url"]})\n' for e in entries if e['categoryId'] == key)
-    return {'sitemap-content.html': html, 'guides.json': json.dumps(data, indent=2, ensure_ascii=False) + '\n', 'llms.txt': llms}
+    return {'sitemap-content.html': version_html(html, root), 'guides.json': json.dumps(data, indent=2, ensure_ascii=False) + '\n', 'llms.txt': llms}
 
 
 if __name__ == '__main__':
