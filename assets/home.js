@@ -31,6 +31,7 @@
   input.addEventListener('input', filter);
   clear.addEventListener('click', () => {
     input.value = '';
+    clearQuery();
     filter();
     input.focus();
   });
@@ -38,8 +39,31 @@
   for (const link of document.querySelectorAll('.bp-nav a, .bp-topic')) {
     link.addEventListener('click', () => {
       input.value = '';
+      clearQuery();
       filter();
     });
   }
   search.hidden = false;
+  // Shareable queries let readers and browser agents return to the same search.
+  function clearQuery() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('q');
+    window.history.replaceState(null, '', url);
+  }
+  function readQuery() {
+    input.value = new URL(window.location.href).searchParams.get('q') || '';
+    filter();
+  }
+  search.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const url = new URL(window.location.href);
+    const query = input.value.trim();
+    if (query) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
+    url.hash = 'all-guides';
+    window.history.replaceState(null, '', url);
+    filter();
+  });
+  window.addEventListener('popstate', readQuery);
+  readQuery();
 })();

@@ -1,18 +1,23 @@
 # BestPicks Reviews
 
-> Product buying guides based on published research. Pages state their evidence and limitations; a guide is not proof of hands-on testing. Prices and product details can change. Some links earn affiliate commissions.
+> Research-based product buying guides. Each guide states its evidence and limitations. Inclusion does not establish hands-on testing. Some links earn affiliate commissions.
 
-## Editorial information
+## Browse and understand the site
+- [Guide directory](https://bestpicksreviews.com/sitemap-content.html)
+- [Guide directory as JSON](https://bestpicksreviews.com/guides.json)
+- [XML sitemap](https://bestpicksreviews.com/sitemap.xml)
 - [About](https://bestpicksreviews.com/about.html)
 - [Research methodology](https://bestpicksreviews.com/methodology.html)
 - [Affiliate disclosure](https://bestpicksreviews.com/disclosure.html)
 - [Corrections and contact](https://bestpicksreviews.com/contact.html)
 
-## Current guides
+## Open-ear audio
 - [OpenRock X: open-ear earbuds for workouts](https://bestpicksreviews.com/best-open-ear-earbuds-for-working-out/)
 - [OpenRock E: a budget running option](https://bestpicksreviews.com/best-open-ear-headphones-for-running/)
 - [OpenRock S2: a closer look at fit](https://bestpicksreviews.com/best-open-ear-earbuds-that-dont-fall-out/)
 - [OpenRock Link 20: a headset for calls](https://bestpicksreviews.com/best-open-ear-headphones-for-office-calls/)
+
+## Home & everyday
 - [Choosing an air purifier for your bedroom](https://bestpicksreviews.com/best-air-purifier-for-bedroom/)
 - [What to look for in a budget robot vacuum](https://bestpicksreviews.com/best-robot-vacuum-under-200/)
 - [Standing desk converters: size, fit, and setup](https://bestpicksreviews.com/best-standing-desk-converter/)
@@ -20,15 +25,21 @@
 - [Mechanical pencils for writing and drawing](https://bestpicksreviews.com/best-mechanical-pencils/)
 - [Electric toothbrushes on a smaller budget](https://bestpicksreviews.com/best-electric-toothbrush-under-50/)
 - [GEOBIN and IM4000: small-backyard composting](https://bestpicksreviews.com/best-compost-bin-for-small-backyard/)
+
+## Saunas & cold plunge
 - [The Sweat Cabin: planning a backyard sauna](https://bestpicksreviews.com/best-outdoor-sauna-kit-for-backyard/)
 - [The Sweat Box: a one-person indoor sauna](https://bestpicksreviews.com/best-indoor-sauna-for-small-spaces/)
 - [The Sweat Barrel: sizing up a barrel sauna](https://bestpicksreviews.com/best-barrel-sauna-for-2-people/)
 - [Harvia Spirit: choosing a sauna heater](https://bestpicksreviews.com/best-sauna-heater-for-home-sauna/)
 - [KOLO bucket and ladle: sauna accessories](https://bestpicksreviews.com/best-sauna-accessories-starter-kit/)
 - [The OG Plunge Tub: a home cold-plunge option](https://bestpicksreviews.com/best-home-sauna-for-cold-plunge-recovery/)
+
+## Dog gear
 - [Big Ass Harness: a harness for large breeds](https://bestpicksreviews.com/best-heavy-duty-dog-harness-for-large-breeds/)
 - [Big Ass Tactical Leash: a closer look](https://bestpicksreviews.com/best-dog-leash-for-large-aggressive-pullers/)
 - [Big Ass Tactical Collar: heavy-duty dog gear](https://bestpicksreviews.com/best-chew-proof-dog-collar-heavy-duty/)
+
+## Skincare
 - [IMAGE MD power-C: a vitamin C serum](https://bestpicksreviews.com/best-luxury-vitamin-c-serum-for-dark-spots-and-hyperpigmentation/)
 - [AGELESS+ 0.1%: an introduction to retinol](https://bestpicksreviews.com/best-retinol-cream-for-wrinkles-beginners/)
 - [AGELESS+ 0.3%: a retinol cream guide](https://bestpicksreviews.com/best-luxury-retinol-cream-for-fine-lines-and-wrinkles/)

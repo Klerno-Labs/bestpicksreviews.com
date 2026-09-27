@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
       - name: Validate canonical pages, links, sitemap and review retention
         run: python3 scripts/validate.py
+      - name: Verify discovery directories match published guides
+        run: python3 scripts/build_discovery.py --check
       - name: Test publishing regression checks
         run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Test consent and affiliate click measurement

@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Search discovery and user-requested reading of public guides.
+# These access rules do not guarantee indexing or recommendations.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+Allow: /
+
 Sitemap: https://bestpicksreviews.com/sitemap.xml

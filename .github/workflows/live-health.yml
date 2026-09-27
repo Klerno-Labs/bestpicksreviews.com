@@ -1,0 +1,32 @@
+name: Daily live site health
+
+on:
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-health
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check pages, redirects and search discovery
+        run: python3 scripts/check_live.py --output /tmp/bestpicks-live-health.json
+      - name: Save timestamped results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bestpicks-live-health
+          path: /tmp/bestpicks-live-health.json
+          retention-days: 30
