@@ -1,0 +1,12 @@
+#bp-privacy-panel{position:fixed;bottom:1rem;left:1rem;right:1rem;max-width:620px;z-index:10001;background:#fff;color:#18233a;border:1px solid #c9cbd0;box-shadow:0 6px 30px #18233a24;padding:1rem 1.25rem;border-radius:8px;font:14px/1.5 system-ui,sans-serif}
+#bp-privacy-panel p{margin:0 0 .7rem;color:inherit}#bp-privacy-panel a{color:#223c6e;text-decoration:underline}
+#bp-privacy-panel>div{display:flex;gap:.75rem;flex-wrap:wrap}#bp-privacy-panel button{background:#fff;color:#18233a;border:1px solid #18233a;border-radius:4px;padding:.7rem 1rem;font:600 14px system-ui;cursor:pointer}
+#bp-privacy-settings{display:block;margin:1rem auto;padding:.6rem 1rem;border:1px solid currentColor;border-radius:4px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.bp-research-note,.bp-sources{padding:1rem 1.25rem;margin:1.25rem 0;border:1px solid var(--border,#d5d7dc);border-left:3px solid #a24d27;border-radius:4px;background:var(--bg-alt,#faf8f4);font-size:.9rem;line-height:1.65}
+.bp-research-note p,.bp-sources p{margin:.5rem 0}.bp-sources ul{margin:.5rem 0 0;padding-left:1.2rem}.bp-sources a{overflow-wrap:anywhere}.bp-sources h2{font-size:1.2rem}
+.bp-correction-date{font-size:.8rem;color:var(--text-secondary,#475569)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #c45c2c;outline-offset:4px}
+@media(max-width:767px){body:has(#bp-sticky-cta){padding-bottom:100px}.nav-in,.nav-inner{flex-wrap:wrap;gap:.6rem}.nav-links{flex-wrap:wrap;gap:.85rem}#bp-sticky-cta>div{max-width:60%;font-size:.75rem!important}#bp-privacy-panel{max-height:45vh;overflow:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+.bp-product-placeholder{display:flex;min-height:230px;width:100%;padding:1.5rem;box-sizing:border-box;flex-direction:column;justify-content:center;background:#eae4d8;color:#1c2b32;text-align:center;gap:1rem}.bp-product-placeholder>span{font:600 .7rem/1.2 system-ui,sans-serif;letter-spacing:.15em}.bp-product-placeholder strong{font:500 clamp(1.4rem,3vw,2.2rem)/1.1 Georgia,serif}.bp-product-placeholder-small{width:64px;min-width:64px;min-height:64px;padding:.3rem;border-radius:6px}.bp-product-placeholder-small>span{font-size:.4rem}.bp-product-placeholder-small strong{display:none}
