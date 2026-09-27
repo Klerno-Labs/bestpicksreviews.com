@@ -22,6 +22,7 @@
       category.hidden = ![...category.querySelectorAll('.bp-guide')].some((guide) => !guide.hidden);
     }
     empty.hidden = count !== 0;
+    empty.textContent = count === 0 ? "No guides match that search. Try a category or a shorter product name." : "";
     clear.hidden = input.value.length === 0;
     status.textContent = words.length
       ? `${count} ${count === 1 ? 'guide matches' : 'guides match'} your search.`
