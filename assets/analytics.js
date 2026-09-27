@@ -16,11 +16,20 @@
     window['ga-disable-' + measurementId] = false;
     window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
+    var config = {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       page_location: location.origin + location.pathname
-    });
+    };
+    // Preserve recognized assistant attribution without collecting arbitrary
+    // query strings, search terms, conversation IDs, or campaign text.
+    var source = new URL(location.origin + location.pathname + location.search).searchParams.get('utm_source');
+    var aiSources = ['chatgpt.com', 'perplexity.ai', 'claude.ai', 'gemini.google.com', 'copilot.microsoft.com'];
+    if (source && aiSources.indexOf(source.toLowerCase()) !== -1) {
+      config.campaign_source = source.toLowerCase();
+      config.campaign_medium = 'referral';
+    }
+    window.gtag('config', measurementId, config);
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;

@@ -7,7 +7,7 @@ const source = readFileSync(new URL('../assets/analytics.js', import.meta.url), 
 
 // Only the DOM behavior consumed by analytics.js is simulated. No fetch or real
 // browser transport exists in this context, so tests cannot send user events.
-function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBlocked = false } = {}) {
+function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBlocked = false, search = '?private=not-collected' } = {}) {
   class Element {
     constructor(tag) { this.tagName = tag; this.children = []; this.events = {}; this.dataset = {}; }
     appendChild(child) { this.children.push(child); child.parent = this; return child; }
@@ -43,7 +43,7 @@ function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBloc
     getItem(key) { if (storageBlocked) throw new Error('unavailable'); return values.get(key) ?? null; },
     setItem(key, value) { if (storageBlocked) throw new Error('unavailable'); values.set(key, value); },
   };
-  const location = { hostname, origin: `https://${hostname}`, pathname: '/best-open-ear-headphones-for-running/', search: '?private=not-collected' };
+  const location = { hostname, origin: `https://${hostname}`, pathname: '/best-open-ear-headphones-for-running/', search };
   const window = {};
   vm.runInNewContext(source, { window, document, location, localStorage, URL, Date });
   return {
@@ -146,4 +146,25 @@ test('blocked browser storage does not prevent consent controls or cause pre-con
   assert.equal(context.loads().length, 0);
   context.choose('granted');
   assert.equal(context.loads().length, 1);
+});
+
+test('recognized AI source is preserved only after consent without other query data', () => {
+  const context = browser({ search: '?utm_source=chatgpt.com&utm_campaign=private-conversation&q=private-search' });
+  assert.equal(context.calls().length, 0);
+  context.choose('granted');
+  const config = context.calls().find(args => args[0] === 'config')[2];
+  assert.equal(config.campaign_source, 'chatgpt.com');
+  assert.equal(config.campaign_medium, 'referral');
+  assert.equal(config.page_location.includes('?'), false);
+  assert.equal(JSON.stringify(context.calls()).includes('private-'), false);
+});
+
+test('unknown and lookalike campaign sources are not forwarded', () => {
+  for (const source of ['private@example.com', 'chatgpt.com.evil.example', 'private-conversation']) {
+    const context = browser({ stored: 'granted', search: '?utm_source=' + encodeURIComponent(source) });
+    const config = context.calls().find(args => args[0] === 'config')[2];
+    assert.equal(config.campaign_source, undefined);
+    assert.equal(config.campaign_medium, undefined);
+    assert.equal(JSON.stringify(context.calls()).includes(source), false);
+  }
 });

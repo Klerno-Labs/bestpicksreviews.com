@@ -247,3 +247,10 @@
 }
 
 .bp-story-art-office{background:#e6dace;color:#533e32}
+/* Shared, crawlable guide directory. */
+.bp-directory-intro { padding-block: 54px 12px; }
+.bp-directory-intro h1 { font-size: clamp(38px, 5vw, 64px); line-height: 1.08; margin-block: 16px 24px; }
+.bp-directory-intro > p:not(.bp-eyebrow) { max-width: 720px; line-height: 1.8; margin-block: 18px; }
+.bp-directory-intro nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.bp-search-control .bp-search-submit { display: inline-flex; padding: 10px 14px; background: #192f3b; color: #fff; border-radius: 3px; }
+@media (max-width: 500px) { .bp-search-control { flex-wrap: wrap; } .bp-search-control input { flex: 1; min-width: 140px; } }
