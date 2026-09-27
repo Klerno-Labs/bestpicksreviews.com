@@ -274,6 +274,10 @@ def validate_site(root: Path) -> Validation:
                 try:
                     schema = json.loads(script["text"])
                     for item in schema_objects(schema):
+                        types = item.get("@type", [])
+                        types = types if isinstance(types, list) else [types]
+                        if any(value in ("Product", "https://schema.org/Product", "http://schema.org/Product") for value in types):
+                            result.errors.append(f"{page.path}: unsupported Product markup requires an explicit evidence review; use Article markup for research guides")
                         if "aggregateRating" in item or "AggregateRating" in str(item.get("@type", "")):
                             result.errors.append(f"{page.path}: unsupported aggregateRating must be removed or explicitly reviewed")
                 except (ValueError, TypeError) as error:
