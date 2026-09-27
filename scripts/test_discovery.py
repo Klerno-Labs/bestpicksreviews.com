@@ -6,9 +6,23 @@ import shutil
 import unittest
 from build_discovery import ROOT, render
 from check_live import html_issues
+from version_assets import version_html
 
 
 class DiscoveryChecks(unittest.TestCase):
+    def test_asset_changes_invalidate_only_the_changed_file(self):
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'assets').mkdir()
+            css = root / 'assets/test.css'
+            css.write_text('body{color:black}')
+            html = '<link href="/assets/test.css"><a href="/best-guide/">Guide</a>'
+            first = version_html(html, root)
+            self.assertEqual(first, version_html(first, root))
+            self.assertIn('<a href="/best-guide/">', first)
+            css.write_text('body{color:blue}')
+            self.assertNotEqual(first, version_html(first, root))
+
     def test_every_guide_is_in_html_json_and_text_map(self):
         outputs = render(ROOT)
         entries = json.loads(outputs['guides.json'])['guides']
