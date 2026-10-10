@@ -7,7 +7,7 @@ const source = readFileSync(new URL('../assets/analytics.js', import.meta.url), 
 
 // Only the DOM behavior consumed by analytics.js is simulated. No fetch or real
 // browser transport exists in this context, so tests cannot send user events.
-function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBlocked = false, search = '?private=not-collected' } = {}) {
+function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBlocked = false, search = '?private=not-collected', referrer = '' } = {}) {
   class Element {
     constructor(tag) { this.tagName = tag; this.children = []; this.events = {}; this.dataset = {}; }
     appendChild(child) { this.children.push(child); child.parent = this; return child; }
@@ -32,7 +32,7 @@ function browser({ stored = null, hostname = 'bestpicksreviews.com', storageBloc
   const events = {};
   const find = (node, id) => node.id === id ? node : node.children.map(c => find(c, id)).find(Boolean);
   const document = {
-    body, head, readyState: 'complete',
+    body, head, readyState: 'complete', referrer,
     createElement: tag => new Element(tag),
     getElementById: id => find(body, id) || find(head, id),
     querySelector: selector => selector === 'footer' ? footer : null,
@@ -163,8 +163,63 @@ test('unknown and lookalike campaign sources are not forwarded', () => {
   for (const source of ['private@example.com', 'chatgpt.com.evil.example', 'private-conversation']) {
     const context = browser({ stored: 'granted', search: '?utm_source=' + encodeURIComponent(source) });
     const config = context.calls().find(args => args[0] === 'config')[2];
-    assert.equal(config.campaign_source, undefined);
-    assert.equal(config.campaign_medium, undefined);
+    assert.equal(config.campaign_source, '');
+    assert.equal(config.campaign_medium, '');
     assert.equal(JSON.stringify(context.calls()).includes(source), false);
   }
+});
+
+test('ordinary tagged campaigns retain public attribution only after consent', () => {
+  const context = browser({ search: '?utm_source=pinterest&utm_medium=organic_social&utm_campaign=guide-reviews-2026-10&utm_term=private@example.com&utm_content=private-name' });
+  assert.equal(context.calls().length, 0);
+  context.choose('granted');
+  const config = context.calls().find(args => args[0] === 'config')[2];
+  assert.equal(config.campaign_source, 'pinterest');
+  assert.equal(config.campaign_medium, 'organic_social');
+  assert.equal(config.campaign_name, 'guide-reviews-2026-10');
+  assert.equal(config.campaign_term, '');
+  assert.equal(config.campaign_content, '');
+  assert.equal(JSON.stringify(context.calls()).includes('private'), false);
+});
+
+test('arbitrary campaign names and referrer paths never reach analytics config', () => {
+  const context = browser({ stored: 'granted', search: '?utm_source=newsletter&utm_campaign=private-person&utm_medium=private@example.com', referrer: 'https://newsletter.example/private-person?email=private@example.com' });
+  const config = context.calls().find(args => args[0] === 'config')[2];
+  assert.equal(config.campaign_medium, 'email');
+  assert.equal(config.campaign_name, '');
+  assert.equal(config.page_referrer, 'https://newsletter.example/');
+  assert.equal(JSON.stringify(context.calls()).includes('private'), false);
+});
+
+test('research and ordinary outbound links are distinct from affiliate conversions', () => {
+  const context = browser({ stored: 'granted' });
+  const href = 'https://manufacturer.example/product?email=private@example.com';
+  assert.deepEqual(context.click(href), { href, prevented: false });
+  context.click('mailto:private@example.com');
+  context.click('https://bestpicksreviews.com/methodology.html');
+  const events = context.calls().filter(args => args[0] === 'event');
+  assert.equal(events.length, 1);
+  assert.equal(events[0][1], 'outbound_click');
+  assert.equal(events[0][2].destination_domain, 'manufacturer.example');
+  assert.equal(JSON.stringify(events).includes('private'), false);
+  assert.equal(affiliateEvents(context).length, 0);
+});
+
+test('denied and revoked consent also suppress non-affiliate outbound events', () => {
+  const context = browser({ stored: 'denied' });
+  context.click('https://manufacturer.example/product');
+  assert.equal(context.calls().length, 0);
+  context.choose('granted');
+  context.choose('denied');
+  context.click('https://manufacturer.example/product');
+  assert.equal(context.calls().filter(args => args[0] === 'event').length, 0);
+});
+
+test('affiliate labels cannot leak free text or an email', () => {
+  const context = browser({ stored: 'granted' });
+  context.click('https://www.awin1.com/cread.php?awinmid=private@example.com&clickref=private@example.com');
+  const event = affiliateEvents(context)[0];
+  assert.equal(event[2].advertiser_id, '');
+  assert.equal(event[2].clickref, '');
+  assert.equal(JSON.stringify(event).includes('private'), false);
 });
