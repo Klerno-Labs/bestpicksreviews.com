@@ -10,6 +10,27 @@
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
   window['ga-disable-' + measurementId] = consent !== 'granted';
 
+  // Only public channel labels and explicitly registered campaign IDs are sent.
+  // Never forward arbitrary query text, search terms, email addresses or IDs.
+  var sources = {
+    'pinterest': 'social', 'pinterest.com': 'social',
+    'instagram': 'social', 'facebook': 'social', 'tiktok': 'social',
+    'youtube': 'social', 'newsletter': 'email', 'pegrio': 'referral',
+    'google': 'organic', 'bing': 'organic',
+    'chatgpt.com': 'referral', 'perplexity.ai': 'referral',
+    'claude.ai': 'referral', 'gemini.google.com': 'referral',
+    'copilot.microsoft.com': 'referral'
+  };
+  var media = ['social', 'organic_social', 'paid_social', 'referral', 'email', 'organic', 'cpc'];
+  var campaigns = ['guide-reviews-2026-10', 'label-refill-guide', 'open-ear-fit-guide'];
+
+  function referrerOrigin() {
+    try {
+      var referrer = new URL(document.referrer);
+      return /^https?:$/.test(referrer.protocol) ? referrer.origin + '/' : '';
+    } catch (_) { return ''; }
+  }
+
   function start() {
     if (started || !production || consent !== 'granted') return;
     started = true;
@@ -19,15 +40,24 @@
     var config = {
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      page_location: location.origin + location.pathname
+      page_location: location.origin + location.pathname,
+      page_referrer: referrerOrigin(),
+      campaign_term: '',
+      campaign_content: '',
+      campaign_id: ''
     };
-    // Preserve recognized assistant attribution without collecting arbitrary
-    // query strings, search terms, conversation IDs, or campaign text.
-    var source = new URL(location.origin + location.pathname + location.search).searchParams.get('utm_source');
-    var aiSources = ['chatgpt.com', 'perplexity.ai', 'claude.ai', 'gemini.google.com', 'copilot.microsoft.com'];
-    if (source && aiSources.indexOf(source.toLowerCase()) !== -1) {
-      config.campaign_source = source.toLowerCase();
-      config.campaign_medium = 'referral';
+    var params = new URL(location.origin + location.pathname + location.search).searchParams;
+    var source = (params.get('utm_source') || '').toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(sources, source)) {
+      config.campaign_source = source;
+      var medium = (params.get('utm_medium') || '').toLowerCase();
+      config.campaign_medium = media.indexOf(medium) !== -1 ? medium : sources[source];
+      var campaign = params.get('utm_campaign') || '';
+      config.campaign_name = campaigns.indexOf(campaign) !== -1 ? campaign : '';
+    } else {
+      config.campaign_source = '';
+      config.campaign_medium = '';
+      config.campaign_name = '';
     }
     window.gtag('config', measurementId, config);
     var script = document.createElement('script');
@@ -66,14 +96,24 @@
     if (!link) return;
     var url;
     try { url = new URL(link.href); } catch (_) { return; }
+    if (!/^https?:$/.test(url.protocol) || url.hostname === location.hostname) return;
     var awin = /(^|\.)awin1\.com$/.test(url.hostname);
     var amazon = /(^|\.)amazon\.com$/.test(url.hostname) && url.searchParams.has('tag');
-    if (!awin && !amazon) return;
+    if (!awin && !amazon) {
+      window.gtag('event', 'outbound_click', {
+        destination_domain: url.hostname,
+        article_slug: location.pathname.replace(/^\/+|\/+$/g, '') || 'home',
+        transport_type: 'beacon'
+      });
+      return;
+    }
+    var advertiser = url.searchParams.get('awinmid') || '';
+    var clickref = url.searchParams.get('clickref') || '';
     window.gtag('event', 'affiliate_click', {
       affiliate_network: awin ? 'awin' : 'amazon',
-      advertiser_id: awin ? (url.searchParams.get('awinmid') || '') : 'amazon',
+      advertiser_id: awin ? (/^\d{1,12}$/.test(advertiser) ? advertiser : '') : 'amazon',
       article_slug: location.pathname.replace(/^\/+|\/+$/g, '') || 'home',
-      clickref: url.searchParams.get('clickref') || '',
+      clickref: /^[a-z0-9_-]{1,100}$/i.test(clickref) ? clickref : '',
       link_placement: link.closest('#bp-sticky-cta') ? 'sticky' : link.closest('aside') ? 'sidebar' : link.querySelector('img') ? 'image' : 'article',
       transport_type: 'beacon'
     });
